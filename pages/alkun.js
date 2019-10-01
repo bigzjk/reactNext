@@ -1,10 +1,14 @@
+import {withRouter} from 'next/router'
 import comp from '../components/comp'
-function alkun() {
+function alkun({router}) {
+    let { aa, bb} = router.query
+    
+
     return (
         <div>
-            hahahha
+            hahahha{aa}---{bb}
             {comp()}
         </div>
     )
 }
-export default alkun
+export default withRouter(alkun)
