@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 import Router from 'next/router'
+import {Button} from 'antd'
 import Nav from '../components/nav'
 
 const Home = () => {
@@ -22,13 +23,14 @@ const Home = () => {
 
   return <div>
 
-    <Link href="/alkun?aa=11&bb=222"><a>alkun</a></Link>
+    <Link href="/test?aa=11&bb=222"><a>alkun</a></Link>
     <p onClick={() => {
       Router.push({pathname:'/alkun', query: {
         aa: 666,
         bb: 999
       }})
     }}>11111</p>
+    <Button>点击</Button>
     <style jsx>{`
       .hero {
         width: 100%;
