@@ -9,8 +9,8 @@ function alkun({router, results}) {
         <div>
             hahahha{aa}---{bb}
             {comp()}
-            {results && results.map(item => (
-                <li key={item}>{item.contentId}</li>
+            {results && results.map((item, i) => (
+                <li key={i}>{item.contentId}</li>
                 
             ))}
             <style jsx>{`
@@ -25,7 +25,6 @@ function alkun({router, results}) {
 alkun.getInitialProps = async () => {
     let promise = new Promise((resolve, reject) => {
         axios('http://mapi.alkun.top/cms_list_tag?nid=23831003&type=2006&pageNo=0&pageSize=10').then(resp => {
-            console.log(resp && resp.data && resp.data.result)
             resolve(resp && resp.data && resp.data.result)
         })
     })
