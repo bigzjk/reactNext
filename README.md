@@ -1,4 +1,4 @@
-# react的SSR框架 - next；
+# react的SSR框架 - next
 
 ### 启动。打包
 ```js
@@ -22,6 +22,7 @@ npm run build
 ├── .gitignore
 ├── next.config.js
 
+```
 - components 组件目录；用于存放组件，文件名即为组件名
 - pages 页面目录；用于存放页面code，页面名即为路由名；
     + _app.js 为全局函数
@@ -29,7 +30,6 @@ npm run build
 - static 静态资源存放目录；可以放一些css和图片之类的资源
 - next.config.js next的配置文件；目前仅对css文件做了配置处理
 
-```
 ### 在next中，需要使用react hooks的编程方式；
 
 ### next的路由钩子函数: 
