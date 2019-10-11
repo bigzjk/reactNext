@@ -1,0 +1,11 @@
+.header{
+    background: #fff;
+    text-align: center;
+    font-size: 0.28rem;
+    border-bottom: 1Px solid #bdb8b8;
+    height: 10vh;
+    line-height: 10vh;
+}
+.header button {
+    color: red;
+}

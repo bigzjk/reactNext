@@ -1,0 +1,11 @@
+.home{
+    width: 100%;
+    height: 100vh;
+}
+.home .ant-layout{
+    min-height: 80vh;
+}
+.ant-layout-sider{
+    background: #f2f2f2;
+    border-right: 1px solid #000;
+}

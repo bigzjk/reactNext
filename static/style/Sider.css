@@ -1,0 +1,9 @@
+.Sider{
+    width: 15vw;
+}
+.ant-menu{
+    background: #f2f2f2;
+}
+.ant-menu-submenu > .ant-menu{
+    background: #f2f2f2;
+}
