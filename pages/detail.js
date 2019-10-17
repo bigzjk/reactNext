@@ -4,6 +4,7 @@ import React, {useState} from 'react'
 import Router from 'next/router'
 import { Layout } from 'antd'
 import Editor from 'for-editor'
+import axios from 'axios'
 import Header from '../components/Header.js'
 import SiderBox from '../components/Sider.js'
 import '../static/style/Detail.css'
@@ -17,6 +18,11 @@ const Detail = () => {
   // routeChangeError
   // HashChangeStart
   // HashChangeComplete
+
+  axios.get('http://localhost:5555/blog_getlist').then(resp => {
+    console.log('resp', resp)
+  })
+  // http://localhost:5555/blog_getlist
   const [value, setValue] = useState('### abc')
   const handleChange = (val) => {
     setValue(val)

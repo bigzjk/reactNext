@@ -5,9 +5,12 @@ import { Icon, Button } from 'antd'
 import '../static/style/Header.css'
 
 const Header = (props) => {
-    const handleClick = (props) => {
-        console.log(112)
+    console.log('props', props)
+
+    const handleClick = () => {
+        console.log(112, props)
         if(props.handleClick) {
+            console.log(123344)
             props.handleClick()
         } else {
             Router.push('/writing')

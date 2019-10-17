@@ -7,7 +7,6 @@ import Editor from 'for-editor'
 import Header from '../components/Header.js'
 import '../static/style/Writing.css'
 
-const { TextArea } = Input;
 const Writing = () => {
     const [contVal, setContVal] = useState('### 内容区域')
     const [titleVal, setTitleVal] = useState('在此输入你的标题-md')
@@ -26,6 +25,7 @@ const Writing = () => {
             text="提交"
 
             handleClick={()=>{
+                console.log(123)
                 axios.post( 'http://localhost:5555/blog_add', {
                         title: titleVal,
                         content: contVal
