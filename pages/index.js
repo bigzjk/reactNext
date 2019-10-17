@@ -30,12 +30,12 @@ const Home = () => {
   return <div className="home">
     <Header />
     <Layout>
-        <Sider width="15vw">
-          <SiderBox></SiderBox>
-        </Sider>
         <Content>
           <ListBox></ListBox>
         </Content>
+        <Sider width="15vw">
+          <SiderBox></SiderBox>
+        </Sider>
     </Layout>
     <style jsx>{`
      

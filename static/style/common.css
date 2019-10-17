@@ -147,7 +147,7 @@ input {
 }
 
 body {
-    min-width: 640px;
+    min-width: 1000px;
     margin: 0 auto !important;
     background: #f9f9f9;
     overflow-x: hidden;
@@ -159,6 +159,10 @@ body {
     height: 100%;
     position: relative;
     color: #000;
+}
+.layout{
+    width: 1000px;
+    margin: 0 auto !important;
 }
 
 :focus {
