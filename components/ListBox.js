@@ -6,13 +6,14 @@ import '../static/style/ListBox.css'
 const listData = [];
 for (let i = 0; i < 23; i++) {
     listData.push({
+        blog_id: i,
         href: 'http://ant.design',
-        title: `ant design part ${i}`,
+        title: `这是博客文章 ${i}`,
         avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
         description:
-        'Ant Design, a design language for background applications, is refined by Ant UED Team.',
+        '这是这篇博客简介这是这篇博客简介这是这篇博客简介这是这篇博客简介',
         content:
-        'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
+        '内容啊内容啊内容啊内容啊内容啊内容啊内容啊内容啊内容啊内容啊内容啊内容啊内容啊内容啊内容啊内容啊内容啊内容啊内容啊内容啊内容啊内容啊内容啊内容啊内容啊内容啊内容啊内容啊内容啊内容啊内容啊内容啊内容啊内容啊内容啊内容啊内容啊内容啊内容啊内容啊',
     });
 }
 
@@ -41,7 +42,7 @@ const ListBox = () => {
                 </div>
             }
             renderItem={item => (
-                <Link href="/detail">
+                <Link href={`/detail?blog_id=${item.blog_id}`}>
                     <List.Item
                         key={item.title}
                         actions={[

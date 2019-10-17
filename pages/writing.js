@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Router from 'next/router'
-import { Layout, Input, Button } from 'antd'
+import { Layout } from 'antd'
 import axios from 'axios'
 import Editor from 'for-editor'
 
@@ -9,10 +9,8 @@ import '../static/style/Writing.css'
 
 const Writing = () => {
     const [contVal, setContVal] = useState('### 内容区域')
-    const [titleVal, setTitleVal] = useState('在此输入你的标题-md')
-
+    const [titleVal, setTitleVal] = useState('')
     const handleTitleVal = (e) => {
-        console.log(e)
         setTitleVal(e.target.value)
     }
 
@@ -25,7 +23,6 @@ const Writing = () => {
             text="提交"
 
             handleClick={()=>{
-                console.log(123)
                 axios.post( 'http://localhost:5555/blog_add', {
                         title: titleVal,
                         content: contVal
@@ -35,16 +32,16 @@ const Writing = () => {
             }}
         />
         <Layout>
-            <div style={{ margin: '24px 0' }} />
             <input
                 className="titleInp"
                 type="text"
                 value={titleVal}
+                placeholder="在此输标题-md"
                 onChange={handleTitleVal}
             />
             <Editor
-              value={contVal}
-              onChange={handleChange}
+                value={contVal}
+                onChange={handleChange}
             />
         </Layout>
     </div>

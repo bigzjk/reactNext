@@ -9,3 +9,11 @@
     background: #f2f2f2;
     border-right: 1px solid #e8e8e8;
 }
+.ant-layout.ant-layout-has-sider{
+    width: 1000px;
+    margin: auto;
+}
+.for-container{
+    border: none;
+    box-shadow: none;
+}

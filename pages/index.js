@@ -12,35 +12,32 @@ import '../static/style/index.css'
 
 const { Sider, Content } = Layout
 const Home = () => {
-  // 路由钩子函数:
-  // routeChangeStart
-  // routeChangeComplete
-  // beforeHistoryChange
-  // routeChangeError
-  // HashChangeStart
-  // HashChangeComplete
-  Router.events.on('routeChangeStart', (a) => {
-    console.log(a)
-  })
-  Router.events.on('routeChangeComplete', (a) => {
-    console.log('end',a)
-  })
+    // 路由钩子函数:
+    // routeChangeStart
+    // routeChangeComplete
+    // beforeHistoryChange
+    // routeChangeError
+    // HashChangeStart
+    // HashChangeComplete
+    Router.events.on('routeChangeStart', (a) => {
+        console.log(a)
+    })
+    Router.events.on('routeChangeComplete', (a) => {
+        console.log('end',a)
+    })
 
 
-  return <div className="home">
-    <Header />
-    <Layout>
-        <Content>
-          <ListBox></ListBox>
-        </Content>
-        <Sider width="15vw">
-          <SiderBox></SiderBox>
-        </Sider>
-    </Layout>
-    <style jsx>{`
-     
-    `}</style>
-  </div>
+    return <div className="home">
+        <Header />
+        <Layout>
+            <Content>
+                <ListBox></ListBox>
+            </Content>
+            <Sider width="15vw">
+                <SiderBox></SiderBox>
+            </Sider>
+        </Layout>
+    </div>
 }
 
 export default Home

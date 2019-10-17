@@ -5,10 +5,7 @@ import { Icon, Button } from 'antd'
 import '../static/style/Header.css'
 
 const Header = (props) => {
-    console.log('props', props)
-
     const handleClick = () => {
-        console.log(112, props)
         if(props.handleClick) {
             console.log(123344)
             props.handleClick()
@@ -17,11 +14,10 @@ const Header = (props) => {
         }
     }
     return <div className="Header">
-        <div className="logo">
+        <div className="logo" onClick={()=>{Router.push('/')}}>
             <img src="../static/images/alkun_logo.png" alt=""/>
         </div>
         <div>alkun</div>
-        {/* <Link href="/writing"> */}
             <Button
                 type="primary"
                 size='large'
@@ -30,7 +26,6 @@ const Header = (props) => {
                 {props.type !== 'write' ? <Icon type="edit" /> : null}
                 {props.text || '写文章'}
             </Button>  
-        {/* </Link> */}
     </div>
 }
 export default Header
