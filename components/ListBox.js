@@ -24,7 +24,8 @@ const IconText = ({ type, text }) => (
     </span>
 );
 
-const ListBox = () => {
+const ListBox = (props) => {
+    console.log(props)
     return <div className="ListBox">
         <List
             itemLayout="vertical"

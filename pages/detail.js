@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState, useEffect } from 'react'
 // import Link from 'next/link'
 // import Head from 'next/head'
 import Router, {withRouter} from 'next/router'
@@ -20,15 +20,19 @@ const Detail = () => {
     // HashChangeStart
     // HashChangeComplete
     const { blog_id } = Router.query
-    console.log('blog_id:' + blog_id)
-    axios.get('http://localhost:5555/blog_getlist').then(resp => {
-        console.log('resp', resp)
-    })
+    console.log(blog_id)
+    const [value, setValue] = useState('')
+
+    useEffect(() => {
+        // axios.get('http://localhost:5555/blog_getdetail/'+blog_id).then(resp => {
+        //     let cont = resp.data.data.value
+        //     setValue(cont)
+        // })
+    }, [])
+    
     // http://localhost:5555/blog_getlist
-    const [value, setValue] = useState('### abc')
     const handleChange = (val) => {
         setValue(val)
-        console.log(val)
     }
     
     return <div className="Detail">

@@ -24,8 +24,10 @@ const Writing = () => {
 
             handleClick={()=>{
                 axios.post( 'http://localhost:5555/blog_add', {
-                        title: titleVal,
-                        content: contVal
+                        paramInfo: JSON.stringify({
+                            title: titleVal,
+                            content: contVal
+                        })
                     }).then(resp => {
                         console.log(resp)
                     })
