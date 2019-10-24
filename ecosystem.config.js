@@ -1,9 +1,9 @@
 module.exports = {
     apps: [{
         name: 'blogClient',      //应用名
-        script: 'dist/index.js',   //应用文件位置
+        script: 'server.js',   //应用文件位置
         env: {
-            PM2_SERVE_PATH: ".",    //静态服务路径
+            PM2_SERVE_PATH: "./static",    //静态服务路径
             PM2_SERVE_PORT: 5555,   //静态服务器访问端口
             NODE_ENV: 'development' //启动默认模式
         },
@@ -24,15 +24,15 @@ module.exports = {
             host: '47.98.165.188',            //ssh 地址
             ref: 'origin/master',             //GIT远程/分支
             repo: 'git@github.com:bigzjk/reactNext.git',   //git地址
-            path: '/var/www/production',       //服务器文件路径
-            'post-deploy': 'npm install && npm run dev &&  pm2 reload ecosystem.config.js --env production'  //部署后的动作
+            path: '/var/www/blogInfo/blogweb',       //服务器文件路径
+            'post-deploy': 'npm install &&  pm2 reload ecosystem.config.js --env production'  //部署后的动作
         },  
         dev : {
             user : "root",
             host : "47.98.165.188",
             ref  : "origin/master",
             repo: 'git@github.com:bigzjk/reactNext.git',   //git地址
-            path : "/var/www/development",
+            path: '/var/www/blogInfoDev/blogweb',       //服务器文件路径
             "post-deploy" : "npm install && pm2 startOrRestart ecosystem.json --env dev",
             env  : {
               NODE_ENV: "dev"

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React,{ useState, useEffect} from 'react'
 // import Link from 'next/link'
 // import Head from 'next/head'
-import Router from 'next/router'
+// import Router from 'next/router'
 import { Layout } from 'antd'
 import axios from 'axios'
 
@@ -20,19 +20,19 @@ const Home = () => {
     // routeChangeError
     // HashChangeStart
     // HashChangeComplete
-    Router.events.on('routeChangeStart', (a) => {
-        console.log(a)
-    })
-    Router.events.on('routeChangeComplete', (a) => {
-        console.log('end',a)
-    })
+    // Router.events.on('routeChangeStart', (a) => {
+    //     console.log(a)
+    // })
+    // Router.events.on('routeChangeComplete', (a) => {
+    //     console.log('end',a)
+    // })
     const [list, setList] = useState([])
     
     useEffect(() => {
-        // axios.get('http://localhost:5555/blog_getlist/').then(resp => {
-        //     let list = resp.data.data
-        //     setList(list)
-        // })
+        axios.get('http://localhost:5555/blog_getlist/').then(resp => {
+            let list = resp.data.data
+            setList(list)
+        })
         // return () => {
         //     cleanup
         // };
