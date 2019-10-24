@@ -2,7 +2,7 @@ import React from 'react'
 import Router from 'next/router'
 import { Icon, Button } from 'antd'
 
-import '../static/style/Header.css'
+import '../static/style/header.css'
 
 const Header = (props) => {
     const handleClick = () => {
