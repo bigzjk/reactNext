@@ -4,4 +4,10 @@ if(typeof require !== 'undefined'){
     require.extensions['.css']=file=>{}
 }
 
-module.exports = withCss({})
+module.exports = withCss({
+    generateBuildId: async () => {
+        // For example get the latest git commit hash here
+        return 'v1'
+      }
+})
+  

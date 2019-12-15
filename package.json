@@ -6,8 +6,8 @@
     "dev": "next dev --port 3002",
     "server": "node server.js",
     "build": "next build",
-    "start": "next start NODE_ENV=production && node server.js",
-    "push": "pm2 deploy ecosystem.config.js production"
+    "start": "NODE_ENV=production && node server.js",
+    "push": "npm run start && pm2 deploy ecosystem.config.js production"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
