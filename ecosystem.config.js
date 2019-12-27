@@ -25,7 +25,7 @@ module.exports = {
             ref: 'origin/master',             //GIT远程/分支
             repo: 'git@github.com:bigzjk/reactNext.git',   //git地址
             path: '/var/www/blogInfo/blogweb',       //服务器文件路径
-            'post-deploy': 'npm install && npm run start && pm2 reload ecosystem.config.js --env production'  //部署后的动作
+            'post-deploy': 'npm install && npm run export && pm2 reload ecosystem.config.js --env production'  //部署后的动作
         },  
         dev : {
             user : "root",
@@ -33,7 +33,7 @@ module.exports = {
             ref  : "origin/master",
             repo: 'git@github.com:bigzjk/reactNext.git',   //git地址
             path: '/var/www/blogInfoDev/blogweb',       //服务器文件路径
-            "post-deploy" : "npm install && npm run start &&  pm2 startOrRestart ecosystem.json --env dev",
+            "post-deploy" : "npm install && npm run export &&  pm2 startOrRestart ecosystem.json --env dev",
             env  : {
               NODE_ENV: "dev"
             }      
