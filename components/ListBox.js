@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'next/link'
+// import Link from 'next/link'
 
 import { List, Avatar, Icon } from 'antd'
 import '../static/style/ListBox.css'
@@ -43,7 +43,7 @@ const ListBox = (props) => {
                 </div>
             }
             renderItem={item => (
-                <Link href={`/detail?blog_id=${item.blog_id}`}>
+                <a href={`./detail.html?blog_id=${item.blog_id}`}>
                     <List.Item
                         key={item.title}
                         actions={[
@@ -66,7 +66,7 @@ const ListBox = (props) => {
                         />
                         {item.content}
                     </List.Item>
-                </Link>
+                </a>
                 )
             }
     />

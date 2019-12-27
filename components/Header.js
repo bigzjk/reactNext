@@ -10,7 +10,8 @@ const Header = (props) => {
             console.log(123344)
             props.handleClick()
         } else {
-            Router.push('/writing')
+            // Router.push('/writing')
+            location.href = './writing.html'
         }
     }
     return <div className="Header">

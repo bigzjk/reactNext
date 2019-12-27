@@ -12,11 +12,13 @@ app.prepare()
     const router = new Router()
 	// 首页
     router.get('/', async ctx => {
+      // ctx.res.redirect(301, )
       await app.render(ctx.req, ctx.res, '/', ctx.query)
       ctx.respond = false
     })
 	// 详情
     router.get('/detail/:blog_id', async ctx => {
+      // ctx.res.redirect(301, '/detail.html')
       const {blog_id} = ctx.params
       await app.render(ctx.req, ctx.res, `/detail/${blog_id}`, ctx.query)
       ctx.respond = false
